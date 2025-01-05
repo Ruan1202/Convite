@@ -1,56 +1,143 @@
-/* Página Secundária */
-.secondary-page {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    background-image: url('chapeu.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+/* Estilo básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Página principal */
+.main-page {
+    background-image: url('C:\Users\Ruan\Desktop\convitebackground-event.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding-right: 20px; /* Espaço para o texto */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Estilo do texto */
-.secondary-page h1, .secondary-page p {
-    font-family: 'Alice', sans-serif; /* Escolha uma fonte adequada */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right; /* Texto alinhado à direita */
-}
-
-.secondary-page h1 {
+.main-page h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
-.secondary-page p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+.main-page h2 {
+    font-size: 2rem;
+    margin-top: 0;
 }
 
-/* Estilo do chapéu */
-.chapeu {
-    position: absolute;
+/* Página secundária */
+.secondary-page {
+    background-image: url('C:\Users\Ruan\Desktop\convitebackground-event.png'); /* Caminho da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 15px;
+}
+
+.text-container h1, .text-container h2, .text-container p {
+    margin: 10px 0;
+}
+
+.text-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-container a:hover {
+    text-decoration: underline;
+}
+
+.hat-img {
+    width: 100px;
+    height: 100px;
+    position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 100px;
     cursor: pointer;
-    animation: pulse 1s infinite; /* Animação de pulsação */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Animação de pulsação */
-@keyframes pulse {
-    0% {
-        transform: scale(1); /* Tamanho original */
+.hat-img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do chapéu ao passar o mouse */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Reduz o tamanho do texto "Bem-vindos" em telas menores */
+    .main-page h1 {
+        font-size: 2rem;
     }
-    50% {
-        transform: scale(1.1); /* Aumenta 10% */
+
+    /* Ajusta o tamanho do "Chá de Aniversário" */
+    .main-page h2 {
+        font-size: 1.5rem;
     }
-    100% {
-        transform: scale(1); /* Volta ao tamanho original */
+
+    /* Ajusta o espaço ao redor do texto na segunda página */
+    .text-container {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ajusta o tamanho do chapéu para dispositivos móveis */
+    .hat-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Ajusta o layout da página para dispositivos móveis */
+    .secondary-page {
+        background-image: url('C:\Users\Ruan\Desktop\convitebackground-event.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Ajusta os links e o tamanho dos botões */
+    .secondary-page a, .secondary-page button {
+        font-size: 1rem;
+        padding: 8px 15px;
+        margin-top: 10px;
+    }
+}
+
+/* Ajustes para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+    .main-page h1 {
+        font-size: 1.8rem;
+    }
+
+    .secondary-page h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Faz o chapéu ficar menor em telas muito pequenas */
+    .hat-img {
+        width: 50px;
+        height: 50px;
     }
 }
