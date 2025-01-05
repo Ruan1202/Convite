@@ -1,0 +1,56 @@
+/* Página Secundária */
+.secondary-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('chapeu.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding-right: 20px; /* Espaço para o texto */
+}
+
+/* Estilo do texto */
+.secondary-page h1, .secondary-page p {
+    font-family: 'Alice', sans-serif; /* Escolha uma fonte adequada */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right; /* Texto alinhado à direita */
+}
+
+.secondary-page h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.secondary-page p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Estilo do chapéu */
+.chapeu {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    cursor: pointer;
+    animation: pulse 1s infinite; /* Animação de pulsação */
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamanho original */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta 10% */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho original */
+    }
+}
