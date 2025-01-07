@@ -1,119 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite de Aniversário</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Quicksand', sans-serif;
-            background-color: #f3f3f3;
-            overflow: hidden;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            position: relative;
-            background-image: url('convitebackground-event.png'); /* Substitua com o caminho correto da imagem */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .content {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            color: white;
-            text-align: right;
-        }
-
-        .content h1 {
-            font-size: 3rem;
-            margin: 0;
-            font-family: 'Pacifico', cursive;
-        }
-
-        .content h2 {
-            font-size: 2rem;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-
-        .content p {
-            font-size: 1.2rem;
-            margin-top: 5px;
-        }
-
-        .chapeu {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 100px;
-            cursor: pointer;
-        }
-
-        /* Estilo do balão de informações */
-        .info-balloon {
-            position: absolute;
-            bottom: 120px; /* Distância do chapéu */
-            right: 20px;
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            max-width: 250px;
-            display: none; /* Inicialmente invisível */
-            font-size: 1.1rem;
-            text-align: left;
-        }
-
-        .info-balloon::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent transparent #333 transparent;
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1>Bem-vindos</h1>
-            <h2>Chá de Aniversário</h2>
-            <p>Local: Chacara Novo Horizonte II</p>
-            <p><p><a href="https://maps.app.goo.gl/cskVyYL46aYxNta67" target="_blank" class="location-link">Endereço: Rua José Soriano, 119 - Cafezal I</a></p>
-            <p>Data: 23 de Fevereiro de 2025</p>
-            <p>Hora: 10:30</p>
-        </div>
-
-        <!-- Imagem do Chapéu que vai ativar o balão de informações -->
-        <img src="chapeu.png" class="chapeu" alt="Chapéu" onclick="toggleBalloon()">
-
-        <!-- Balão de informações -->
-        <div class="info-balloon" id="infoBalloon">
-            <p><strong>Sugestão para</p>
-            <p><strong>Tamanho de Roupas e Calçados</p>
-            <p><strong>Roupas:</strong> 16 ou P adulto</p>
-            <p><strong>Calçados:</strong> 34 ou 35(Dependendo do Tamanho)</p>
-        </div>
-    </div>
-
-    <script>
-        function toggleBalloon() {
-            const balloon = document.getElementById('infoBalloon');
-            balloon.style.display = (balloon.style.display === 'none' || balloon.style.display === '') ? 'block' : 'none';
-        }
-    </script>
+  <div class="convite-container"></div>
 </body>
 </html>
