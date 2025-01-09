@@ -19,7 +19,7 @@ body, html {
 .imagem-irmao {
     position: absolute;
     top: 62%;
-    left: 30%;
+    left: 35%;
     transform: translate(-50%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao 1s ease-in-out forwards;
@@ -47,7 +47,7 @@ body, html {
 .imagem-irmao2 {
     position: absolute;
     top: 62%;
-    left: 30%;
+    left: 35%;
     transform: translate(-10%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao2 1s ease-in-out 1s forwards;
