@@ -5,9 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convite</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Fontes personalizadas */
+    body {
+      font-family: 'Alice', serif; /* Fonte para o texto geral */
+    }
+
+    h2, h3 {
+      font-family: 'Great Vibes', cursive; /* Fonte para os títulos */
+    }
+  </style>
 </head>
 <body>
-  <div class="convite-container"></div>
+  <div class="convite-container">
+    <!-- Imagem Irmao1 saindo de trás da Alice para a esquerda -->
+    <img src="Irmao1.png" alt="Irmao1" class="imagem-irmao">
+    <!-- Imagem Irmao2 saindo de trás da Alice para a esquerda -->
+    <img src="Irmao2.png" alt="Irmao2" class="imagem-irmao2">
+    <!-- Imagem Chapeleiro saindo da esquerda para o centro -->
+    <img src="Chapeleiro.png" alt="Chapeleiro" class="imagem-chapeleiro">
+    <!-- Imagem Copas movendo da direita para o centro -->
+    <img src="Copas.png" alt="Copas" class="imagem-copas">
+    
+    <!-- Balão de informações do evento -->
+    <div class="balão-informacoes">
+      <h2>Sophia no País das Maravilhas</h2>
+      <p>Local: Chacara Novo Horizonte II.</p>
+      <p>Data: 23 de Fevereiro de 2025.</p>
+      <p>Hora: Das 10:30 as 16:30.</p>
+      <p><a href="https://maps.app.goo.gl/cskVyYL46aYxNta67" target="_blank">Rua José Soleno, 119 - Cafezal II</a>.</p>
+      <!-- Imagem do Chapéu dentro do balão com animação de pulsação -->
+      <img src="Chapeu.png" alt="Chapéu" class="imagem-chapeu" id="chapeu">
+
+      <!-- Balão lateral com mais informações -->
+      <div class="balão-lateral" id="balão-lateral">
+        <h3>Sugestão para Roupa e Calçado</h3>
+        <p>Roupas - Tamanho 16 ou P Adulto.</p>
+        <p>Calçado - 34 ou 35.</p>
+        <button onclick="fecharBalão()">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Função para abrir o balão lateral com mais informações
+    document.getElementById('chapeu').addEventListener('click', function() {
+      document.getElementById('balão-lateral').style.display = 'block';
+    });
+
+    // Função para fechar o balão lateral
+    function fecharBalão() {
+      document.getElementById('balão-lateral').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
