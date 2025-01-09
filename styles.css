@@ -20,7 +20,7 @@ body, html {
     position: absolute;
     top: 62%;
     left: 45%;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao 1s ease-in-out forwards;
     will-change: transform, opacity;
@@ -30,15 +30,15 @@ body, html {
 /* Animação para mover a imagem Irmao1 mais para a esquerda e aumentar a opacidade */
 @keyframes mover-irmao {
     0% {
-        transform: translate(-50%, -50%) scale(0.5);
+        transform: translate(-50%, -50%) scale(0.6);
         opacity: 0;
     }
     50% {
-        transform: translate(-65%, -50%) scale(0.5);
+        transform: translate(-65%, -50%) scale(0.6);
         opacity: 0.02;
     }
     100% {
-        transform: translate(-90%, -50%) scale(0.5);
+        transform: translate(-90%, -50%) scale(0.6);
         opacity: 1;
     }
 }
@@ -48,7 +48,7 @@ body, html {
     position: absolute;
     top: 62%;
     left: 45%;
-    transform: translate(-10%, -50%) scale(0.45);
+    transform: translate(-10%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao2 1s ease-in-out 1s forwards;
     will-change: transform, opacity;
@@ -58,15 +58,15 @@ body, html {
 /* Animação para mover a imagem Irmao2 mais para a esquerda e aumentar a opacidade */
 @keyframes mover-irmao2 {
     0% {
-        transform: translate(-10%, -50%) scale(0.45);
+        transform: translate(-10%, -50%) scale(0.6);
         opacity: 0;
     }
     50% {
-        transform: translate(-30%, -50%) scale(0.45);
+        transform: translate(-30%, -50%) scale(0.6);
         opacity: 0.02;
     }
     100% {
-        transform: translate(-60%, -50%) scale(0.45);
+        transform: translate(-60%, -50%) scale(0.6);
         opacity: 1;
     }
 }
@@ -76,7 +76,7 @@ body, html {
     position: absolute;
     top: 50%;
     left: -120%;
-    transform: translate(-50%, -50%) scale(0.55);
+    transform: translate(-50%, -50%) scale(0.7);
     opacity: 0;
     animation: mover-chapeleiro 2s ease-in-out 2s forwards;
     z-index: 1;
@@ -85,15 +85,15 @@ body, html {
 /* Animação para mover a imagem Chapeleiro da esquerda até o centro */
 @keyframes mover-chapeleiro {
     0% {
-        transform: translate(-50%, -50%) scale(0.55);
+        transform: translate(-50%, -50%) scale(0.7);
         opacity: 0;
     }
     50% {
-        transform: translate(70%, -50%) scale(0.55);
+        transform: translate(70%, -50%) scale(0.7);
         opacity: 0.02;
     }
     100% {
-        transform: translate(90%, -50%) scale(0.55);
+        transform: translate(90%, -50%) scale(0.7);
         opacity: 1;
     }
 }
@@ -101,9 +101,9 @@ body, html {
 /* Imagem Copas movendo da direita para o centro */
 .imagem-copas {
     position: absolute;
-    top: 60%;
-    left: 165%;
-    transform: translate(-50%, -50%) scale(0.7);
+    top: 80%;
+    left: 120%;
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 0;
     animation: mover-copas 2s ease-in-out 3s forwards;
     z-index: 3;
@@ -112,15 +112,15 @@ body, html {
 /* Animação para mover a imagem Copas da direita até o centro */
 @keyframes mover-copas {
     0% {
-        transform: translate(-50%, -50%) scale(0.7);
+        transform: translate(-50%, -50%) scale(0.8);
         opacity: 0;
     }
     50% {
-        transform: translate(-100%, -50%) scale(0.7);
+        transform: translate(-100%, -50%) scale(0.8);
         opacity: 0.02;
     }
     100% {
-        transform: translate(-210%, -50%) scale(0.7);
+        transform: translate(-210%, -50%) scale(0.8);
         opacity: 1;
     }
 }
