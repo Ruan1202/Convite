@@ -19,7 +19,7 @@ body, html {
 .imagem-irmao {
     position: absolute;
     top: 62%;
-    left: 45%;
+    left: 30%;
     transform: translate(-50%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao 1s ease-in-out forwards;
@@ -47,7 +47,7 @@ body, html {
 .imagem-irmao2 {
     position: absolute;
     top: 62%;
-    left: 45%;
+    left: 30%;
     transform: translate(-10%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao2 1s ease-in-out 1s forwards;
@@ -99,31 +99,33 @@ body, html {
 }
 
 /* Imagem Copas movendo da direita para o centro */
+/* Imagem Copas movendo de baixo para cima */
 .imagem-copas {
     position: absolute;
-    top: 80%;
-    left: 120%;
-    transform: translate(-50%, -50%) scale(0.8);
+    bottom: -100%; /* Coloca a imagem fora da tela, abaixo */
+    left: 20%; /* Centraliza horizontalmente */
+    transform: translateX(-50%) scale(0.7);
     opacity: 0;
     animation: mover-copas 2s ease-in-out 3s forwards;
     z-index: 3;
 }
 
-/* Animação para mover a imagem Copas da direita até o centro */
+/* Animação para mover a imagem Copas de baixo para cima */
 @keyframes mover-copas {
     0% {
-        transform: translate(-50%, -50%) scale(0.8);
+        bottom: -100%; /* Inicia fora da tela, abaixo */
         opacity: 0;
     }
     50% {
-        transform: translate(-100%, -50%) scale(0.8);
-        opacity: 0.02;
+        bottom: -20%; /* Posiciona a imagem um pouco acima do fundo da tela */
+        opacity: 0.5;
     }
     100% {
-        transform: translate(-210%, -50%) scale(0.8);
+        bottom: -10%; /* Finaliza no meio da tela */
         opacity: 1;
     }
 }
+
 
 /* Estilo do balão de informações */
 /* Estilo do balão de informações */
