@@ -178,7 +178,7 @@ body, html {
 
 
 /* Estilo da imagem do chapéu dentro do balão com animação de pulsação */
-.imagem-chapeu {
+.imagem-gato {
     position: absolute;
     bottom: -110px; /* Coloca o chapéu na parte inferior do balão */
     left: 50%;
