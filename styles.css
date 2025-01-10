@@ -229,12 +229,12 @@ body, html {
 /* Estilo do balão de informações */
 .balão-informacoes {
     position: absolute;
-    bottom: 72%;
+    bottom: 71%;
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Centraliza com mais precisão */
     background-color: rgba(0, 0, 0, 0.5); /* Fundo preto mais transparente */
     line-height: 0.9; /* Ajuste o valor conforme necessário */
-    height: 250px;
+    height: 220px;
     width: 400px; /* Largura fixa */
     padding: 10px;
     border-radius: 15px;
