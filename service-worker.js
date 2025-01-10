@@ -5,10 +5,11 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/styles.css',
-  '/Irmao1.png', // Exemplo de imagem
-  '/Irmao2.png', // Exemplo de imagem
-  '/Chapeleiro.png', // Exemplo de imagem
-  '/Copas.png', // Exemplo de imagem
+  '/Irmao1.png',
+  '/Irmao2.png',
+  '/Chapeleiro.png',
+  '/Copas.png',
+  '/chapeu.png', // Imagem adicional
   // Adicione aqui outros arquivos que você deseja que sejam armazenados em cache
 ];
 

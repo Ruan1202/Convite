@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alice&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
+  
   <style>
     /* Fontes personalizadas */
     body {
@@ -16,6 +16,70 @@
 
     h2, h3 {
       font-family: 'Great Vibes', cursive; /* Fonte para os títulos */
+    }
+    /* Estilo para o link da localização (tarja branca) */
+    .balão-informacoes a {
+      display: inline-block;
+      background-color: white; /* Cor de fundo da tarja */
+      color: #333; /* Cor do texto */
+      padding: 8px 12px; /* Espaçamento interno */
+      border-radius: 5px; /* Bordas arredondadas */
+      text-decoration: none; /* Remove a sublinha do link */
+      font-size: 16px; /* Tamanho da fonte */
+      margin-top: 10px; /* Espaçamento acima da tarja */
+    }
+
+    /* Estilo para quando o link for hover */
+    .balão-informacoes a:hover {
+      background-color: #f1f1f1; /* Cor de fundo mais clara no hover */
+      color: #000; /* Cor do texto ao passar o mouse */
+    }
+
+    .convite-container {
+      position: relative;
+      text-align: center;
+    }
+
+    /* Estilo do Balão Lateral */
+    .balão-lateral {
+      display: none;
+      position: absolute;
+      top: 90%;
+      left: 65%;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .balão-lateral h3 {
+      font-size: 25px;
+    }
+
+    .balão-lateral p {
+      font-size: 16px;
+    }
+
+    /* Estilo da Imagem do Gato */
+    #gato {
+      cursor: pointer;
+    }
+    
+    /* Estilo do botão de fechar do balão lateral */
+    .balão-lateral button {
+      background-color: #f44336;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .balão-lateral button:hover {
+      background-color: #e53935;
     }
   </style>
 </head>
@@ -29,16 +93,23 @@
     <img src="Chapeleiro.png" alt="Chapeleiro" class="imagem-chapeleiro">
     <!-- Imagem Copas movendo da direita para o centro -->
     <img src="Copas.png" alt="Copas" class="imagem-copas">
+    <img src="gato1.png" alt="Gato1" class="imagem-gato1">
+    <img src="gato2.png" alt="Gato2" class="imagem-gato2">
+    <img src="gato3.png" alt="Gato3" class="imagem-gato3">
+
     
     <!-- Balão de informações do evento -->
     <div class="balão-informacoes">
       <h2>Sophia no País das Maravilhas</h2>
       <p>Local: Chacara Novo Horizonte II.</p>
       <p>Data: 23 de Fevereiro de 2025.</p>
-      <p>Hora: Das 10:30 as 16:30.</p>
+      <p> A partir das 10:30.</p>
+      <p> Kit Churrasco (SOMENTE ALMOÇO).</p>
       <p><a href="https://maps.app.goo.gl/cskVyYL46aYxNta67" target="_blank">Rua José Soleno, 119 - Cafezal II</a>.</p>
+
       <!-- Imagem do Chapéu dentro do balão com animação de pulsação -->
-      <img src="gato.png" alt="Gato" class="imagem-gato" id="gato">
+      <img src="chapeu.png" alt="Chapeu" class="imagem-chapeu" id="chapeu">
+
 
       <!-- Balão lateral com mais informações -->
       <div class="balão-lateral" id="balão-lateral">
@@ -52,7 +123,7 @@
 
   <script>
     // Função para abrir o balão lateral com mais informações
-    document.getElementById('gato').addEventListener('click', function() {
+    document.getElementById('chapeu').addEventListener('click', function() {
       document.getElementById('balão-lateral').style.display = 'block';
     });
 
@@ -61,6 +132,8 @@
       document.getElementById('balão-lateral').style.display = 'none';
     }
   </script>
+  
+  <!-- Registro do Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -74,7 +147,6 @@
       });
     }
   </script>
-  
   
 </body>
 </html>

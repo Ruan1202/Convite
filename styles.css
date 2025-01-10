@@ -19,7 +19,7 @@ body, html {
 .imagem-irmao {
     position: absolute;
     top: 62%;
-    left: 35%;
+    left: 40%;
     transform: translate(-50%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao 1s ease-in-out forwards;
@@ -47,7 +47,7 @@ body, html {
 .imagem-irmao2 {
     position: absolute;
     top: 62%;
-    left: 35%;
+    left: 40%;
     transform: translate(-10%, -50%) scale(0.6);
     opacity: 0;
     animation: mover-irmao2 1s ease-in-out 1s forwards;
@@ -98,7 +98,6 @@ body, html {
     }
 }
 
-/* Imagem Copas movendo da direita para o centro */
 /* Imagem Copas movendo de baixo para cima */
 .imagem-copas {
     position: absolute;
@@ -125,28 +124,128 @@ body, html {
         opacity: 1;
     }
 }
+/* Estilo para a imagem do gato */
+.imagem-gato1 {
+    position: absolute;
+    top: 40%; /* Coloca a imagem no meio da tela verticalmente */
+    left: 72%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%) scale(0.1); /* Aplica transformação para centralizar e reduzir o tamanho */
+    opacity: 0; /* Inicialmente invisível */
+    animation: gato-aparecer-desaparecer 6s ease-in-out 3.5s forwards; /* Aplica a animação com atraso de 2 segundos */
+    z-index: 3;
+}
+
+/* Animação para o gato aparecer e desaparecer */
+@keyframes gato-aparecer-desaparecer {
+    0% {
+        opacity: 0; /* Inicialmente invisível */
+    }
+    25% {
+        opacity: 0.5; /* Meio do ciclo, visível com opacidade de 50% */
+    }
+    50% {
+        opacity: 1; /* Totalmente visível */
+    }
+    75% {
+        opacity: 0.5; /* Meio do ciclo de desaparecimento, opacidade de 50% */
+    }
+    100% {
+        opacity: 0; /* Finaliza invisível */
+    }
+}
+
+
+/* Aplicando a animação ao gato */
+#Gato {
+    animation: gato-aparecer-desaparecer 1.5s ease-in-out forwards; /* A animação vai ocorrer uma vez e parar no estado final */
+}
+/* Estilo para a imagem do gato */
+.imagem-gato2 {
+    position: absolute;
+    top: 40%; /* Coloca a imagem no meio da tela verticalmente */
+    left: 72%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%) scale(0.1) rotate(335deg); /* Aplica transformação para centralizar, reduzir o tamanho e rotacionar a imagem em 45 graus */
+    opacity: 0; /* Inicialmente invisível */
+    animation: gato-aparecer-desaparecer 4s ease-in-out 4.5s forwards; /* Aplica a animação com atraso de 2 segundos */
+    z-index: 3;
+}
+
+/* Animação para o gato aparecer e desaparecer */
+@keyframes gato-aparecer-desaparecer {
+    0% {
+        opacity: 0; /* Inicialmente invisível */
+    }
+    25% {
+        opacity: 0.5; /* Meio do ciclo, visível com opacidade de 50% */
+    }
+    50% {
+        opacity: 1; /* Totalmente visível */
+    }
+    75% {
+        opacity: 0.5; /* Meio do ciclo de desaparecimento, opacidade de 50% */
+    }
+    100% {
+        opacity: 0; /* Finaliza invisível */
+    }
+}
+
+
+/* Aplicando a animação ao gato */
+#Gato {
+    animation: gato-aparecer-desaparecer 2s ease-in-out forwards; /* A animação vai ocorrer uma vez e parar no estado final */
+}
+/* Estilo para a imagem do gato */
+.imagem-gato3 {
+    position: absolute;
+    top: 40%; /* Coloca a imagem no meio da tela verticalmente */
+    left: 80%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%) scale(0.1); /* Aplica transformação para centralizar e reduzir o tamanho */
+    opacity: 0; /* Inicialmente invisível */
+    animation: gato-aparecer 2s ease-in-out 5.5s forwards; /* Aplica a animação com atraso de 3.5 segundos */
+    z-index: 3;
+}
+
+/* Animação para o gato aparecer e continuar visível */
+@keyframes gato-aparecer {
+    0% {
+        opacity: 0; /* Inicialmente invisível */
+    }
+    25% {
+        opacity: 0.5; /* Meio do ciclo, visível com opacidade de 50% */
+    }
+    50% {
+        opacity: 1; /* Totalmente visível */
+    }
+    75% {
+        opacity: 0.5; /* Meio do ciclo de desaparecimento, opacidade de 50% */
+    }
+    100% {
+        opacity: 1; /* Continua visível ao final da animação */
+    }
+}
 
 
 /* Estilo do balão de informações */
 /* Estilo do balão de informações */
 .balão-informacoes {
     position: absolute;
-    bottom: 60%;
+    bottom: 72%;
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Centraliza com mais precisão */
     background-color: rgba(0, 0, 0, 0.5); /* Fundo preto mais transparente */
+    line-height: 0.9; /* Ajuste o valor conforme necessário */
     height: 250px;
     width: 400px; /* Largura fixa */
     padding: 10px;
     border-radius: 15px;
-    text-align: center;
+    text-align: left;
     opacity: 0;
     animation: aparecer-balao 1.5s ease-in-out 5s forwards, crescer-balao 1.5s ease-in-out 5s forwards;
     z-index: 4;
 }
 
 .balão-informacoes h2 {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 8px;
     color: white;
 }
@@ -180,10 +279,10 @@ body, html {
 
 
 /* Estilo da imagem do chapéu dentro do balão com animação de pulsação */
-.imagem-gato {
+.imagem-chapeu {
     position: absolute;
-    bottom: -110px; /* Coloca o chapéu na parte inferior do balão */
-    left: 50%;
+    bottom: -80px; /* Coloca o chapéu na parte inferior do balão */
+    left: 85%;
     transform: translateX(-50%) scale(0.15);
     animation: pulsar 1.5s infinite; /* Faz o chapéu pulsar */
     cursor: pointer; /* Altera o cursor para indicar que é clicável */
@@ -205,9 +304,10 @@ body, html {
 /* Estilo do balão lateral com mais informações */
 .balão-lateral {
     position: absolute;
-    top: 110%; /* Define a posição abaixo do chapéu */
-    left: 50%; /* Centraliza em relação ao chapéu */
-    transform: translateX(-50%); /* Ajusta para o centro */
+    top: -100%; /* Define a posição abaixo do chapéu */
+    left: 70%; /* Centraliza em relação ao chapéu */
+    transform: translateX(-30%); /* Ajusta para o centro */
+    line-height: 0.9; /* Ajuste o valor conforme necessário */
     width: 300px;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
