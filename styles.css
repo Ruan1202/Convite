@@ -104,7 +104,7 @@ body, html {
     position: absolute;
     bottom: -100%; /* Coloca a imagem fora da tela, abaixo */
     left: 40%; /* Centraliza horizontalmente */
-    transform: translateX(-50%) scale(0.8);
+    transform: translateX(-50%) scale(0.9);
     opacity: 0;
     animation: mover-copas 2s ease-in-out 3s forwards;
     z-index: 3;
@@ -205,8 +205,9 @@ body, html {
 /* Estilo do balão lateral com mais informações */
 .balão-lateral {
     position: absolute;
-    top: 10%;
-    right: -150px;
+    top: 110%; /* Define a posição abaixo do chapéu */
+    left: 50%; /* Centraliza em relação ao chapéu */
+    transform: translateX(-50%); /* Ajusta para o centro */
     width: 300px;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
@@ -215,6 +216,7 @@ body, html {
     display: none; /* Inicialmente oculto */
     z-index: 5;
 }
+
 
 .balão-lateral button {
     background-color: #4CAF50;
