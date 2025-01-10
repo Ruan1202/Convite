@@ -102,8 +102,8 @@ body, html {
 /* Imagem Copas movendo de baixo para cima */
 .imagem-copas {
     position: absolute;
-    bottom: -50%; /* Coloca a imagem fora da tela, abaixo */
-    left: 40%; /* Centraliza horizontalmente */
+    bottom: -120%; /* Coloca a imagem fora da tela, abaixo */
+    left: 10%; /* Centraliza horizontalmente */
     transform: translateX(-50%) scale(2);
     opacity: 0;
     animation: mover-copas 2s ease-in-out 3s forwards;
