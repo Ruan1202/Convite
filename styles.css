@@ -281,50 +281,76 @@ body, html {
 /* Estilo da imagem do chapéu dentro do balão com animação de pulsação */
 .imagem-chapeu {
     position: absolute;
+    will-change: transform, opacity; /* Adicionado */
     bottom: -80px; /* Coloca o chapéu na parte inferior do balão */
     left: 85%;
-    transform: translateX(-50%) scale(0.15) translateZ(0); /* Força aceleração por hardware */
+    transform: translateX(-50%) scale(0.15);
     animation: pulsar 1.5s infinite; /* Faz o chapéu pulsar */
     cursor: pointer; /* Altera o cursor para indicar que é clicável */
-    opacity: 1 !important; /* Garante visibilidade */
+    -webkit-animation: pulsar 1.5s infinite; /* Adicionado */
+    -webkit-transform: translateX(-50%) scale(0.15); /* Força renderização no iOS */
+    backface-visibility: hidden; /* Previne falhas ao animar */
     perspective: 1000px; /* Ajuda em transformações 3D */
-    transition: opacity 0.3s ease-in-out; /* Adiciona transição de opacidade */
-    backface-visibility: visible; /* Garante que o chapéu seja visível */
+    opacity: 1 !important; /* Garante visibilidade */
 }
 
 /* Animação de pulsação do chapéu */
 @keyframes pulsar {
     0% {
-        transform: translateX(-50%) scale(0.15) translateZ(0);
+        transform: translateX(-50%) scale(0.15);
     }
     50% {
-        transform: translateX(-50%) scale(0.25) translateZ(0);
+        transform: translateX(-50%) scale(0.25);
     }
     100% {
-        transform: translateX(-50%) scale(0.15) translateZ(0);
+        transform: translateX(-50%) scale(0.15);
+    }
+}.imagem-chapeu {
+    position: absolute;
+    bottom: -80px; /* Coloca o chapéu na parte inferior do balão */
+    left: 85%;
+    transform: translateX(-50%) scale(0.15); /* Removido translateZ(0) */
+    animation: pulsar 1.5s infinite; /* Faz o chapéu pulsar */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    opacity: 1 !important; /* Garante visibilidade */
+    perspective: 1000px; /* Ajuda em transformações 3D */
+    backface-visibility: visible; /* Garante que o chapéu seja visível */
+    transition: opacity 0.3s ease-in-out; /* Adiciona transição de opacidade */
+}
+
+/* Animação de pulsação do chapéu */
+@keyframes pulsar {
+    0% {
+        transform: translateX(-50%) scale(0.15);
+        opacity: 1; /* Garante que o chapéu comece visível */
+    }
+    50% {
+        transform: translateX(-50%) scale(0.25);
+        opacity: 1; /* Garante que o chapéu permaneça visível durante a pulsação */
+    }
+    100% {
+        transform: translateX(-50%) scale(0.15);
+        opacity: 1; /* Garante que o chapéu permaneça visível */
     }
 }
 
-/* Adicionando prefixos para compatibilidade com iOS */
+/* Prefixo para iOS */
 @-webkit-keyframes pulsar {
     0% {
-        -webkit-transform: translateX(-50%) scale(0.15) translateZ(0);
+        -webkit-transform: translateX(-50%) scale(0.15);
+        opacity: 1;
     }
     50% {
-        -webkit-transform: translateX(-50%) scale(0.25) translateZ(0);
+        -webkit-transform: translateX(-50%) scale(0.25);
+        opacity: 1;
     }
     100% {
-        -webkit-transform: translateX(-50%) scale(0.15) translateZ(0);
+        -webkit-transform: translateX(-50%) scale(0.15);
+        opacity: 1;
     }
 }
 
-@-webkit-transform {
-    -webkit-transform: translateX(-50%) scale(0.15) translateZ(0);
-}
 
-@-webkit-animation {
-    -webkit-animation: pulsar 1.5s infinite;
-}
 
 
 /* Estilo do balão lateral com mais informações */
