@@ -49,3 +49,23 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
+
+// JavaScript para a interação com o chapéu e exibição do balão
+document.addEventListener('DOMContentLoaded', function() {
+  const chapeu = document.querySelector('.imagem-chapeu');
+  
+  // Verifica se o chapéu existe na página
+  if (chapeu) {
+    // Evento de clique no chapéu
+    chapeu.addEventListener('click', function() {
+      // Exemplo: Mostrar um balão com um alerta ou conteúdo
+      const balao = document.querySelector('#balao'); // Assumindo que o balão tem o ID 'balao'
+      
+      if (balao) {
+        balao.style.display = 'block'; // Exibe o balão
+      } else {
+        alert("Balão não encontrado!"); // Caso não tenha encontrado o balão
+      }
+    });
+  }
+});

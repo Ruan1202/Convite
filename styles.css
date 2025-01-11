@@ -307,16 +307,18 @@ body, html {
     }
 }.imagem-chapeu {
     position: absolute;
-    bottom: -80px; /* Coloca o chapéu na parte inferior do balão */
+    bottom: -80px;
     left: 85%;
-    transform: translateX(-50%) scale(0.15); /* Removido translateZ(0) */
-    animation: pulsar 1.5s infinite; /* Faz o chapéu pulsar */
-    cursor: pointer; /* Altera o cursor para indicar que é clicável */
-    opacity: 1 !important; /* Garante visibilidade */
-    perspective: 1000px; /* Ajuda em transformações 3D */
-    backface-visibility: visible; /* Garante que o chapéu seja visível */
-    transition: opacity 0.3s ease-in-out; /* Adiciona transição de opacidade */
+    transform: translateX(-50%) scale(0.15);
+    animation: pulsar 1.5s infinite;
+    cursor: pointer;
+    opacity: 1 !important;
+    perspective: 1000px;
+    backface-visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10; /* Garante que o chapéu esteja acima de outros elementos */
 }
+
 
 /* Animação de pulsação do chapéu */
 @keyframes pulsar {
