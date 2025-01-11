@@ -281,43 +281,51 @@ body, html {
 /* Estilo da imagem do chapéu dentro do balão com animação de pulsação */
 .imagem-chapeu {
     position: absolute;
-    will-change: transform, opacity; /* Adicionado */
     bottom: -80px; /* Coloca o chapéu na parte inferior do balão */
     left: 85%;
-    transform: translateX(-50%) scale(0.15);
+    transform: translateX(-50%) scale(0.15) translateZ(0); /* Força aceleração por hardware */
     animation: pulsar 1.5s infinite; /* Faz o chapéu pulsar */
     cursor: pointer; /* Altera o cursor para indicar que é clicável */
-    -webkit-animation: pulsar 1.5s infinite; /* Adicionado */
-    -webkit-transform: translateX(-50%) scale(0.15); /* Força renderização no iOS */
-    backface-visibility: hidden; /* Previne falhas ao animar */
-    perspective: 1000px; /* Ajuda em transformações 3D */
     opacity: 1 !important; /* Garante visibilidade */
+    perspective: 1000px; /* Ajuda em transformações 3D */
+    transition: opacity 0.3s ease-in-out; /* Adiciona transição de opacidade */
+    backface-visibility: visible; /* Garante que o chapéu seja visível */
 }
 
 /* Animação de pulsação do chapéu */
 @keyframes pulsar {
     0% {
-        transform: translateX(-50%) scale(0.15);
+        transform: translateX(-50%) scale(0.15) translateZ(0);
     }
     50% {
-        transform: translateX(-50%) scale(0.25);
+        transform: translateX(-50%) scale(0.25) translateZ(0);
     }
     100% {
-        transform: translateX(-50%) scale(0.15);
+        transform: translateX(-50%) scale(0.15) translateZ(0);
     }
 }
 
-@-webkit-keyframes pulsar { /* Prefixo para navegadores iOS */
+/* Adicionando prefixos para compatibilidade com iOS */
+@-webkit-keyframes pulsar {
     0% {
-        transform: translateX(-50%) scale(0.15);
+        -webkit-transform: translateX(-50%) scale(0.15) translateZ(0);
     }
     50% {
-        transform: translateX(-50%) scale(0.25);
+        -webkit-transform: translateX(-50%) scale(0.25) translateZ(0);
     }
     100% {
-        transform: translateX(-50%) scale(0.15);
+        -webkit-transform: translateX(-50%) scale(0.15) translateZ(0);
     }
 }
+
+@-webkit-transform {
+    -webkit-transform: translateX(-50%) scale(0.15) translateZ(0);
+}
+
+@-webkit-animation {
+    -webkit-animation: pulsar 1.5s infinite;
+}
+
 
 /* Estilo do balão lateral com mais informações */
 .balão-lateral {
