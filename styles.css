@@ -281,11 +281,17 @@ body, html {
 /* Estilo da imagem do chapéu dentro do balão com animação de pulsação */
 .imagem-chapeu {
     position: absolute;
+    will-change: transform, opacity; /* Adicionado */
     bottom: -80px; /* Coloca o chapéu na parte inferior do balão */
     left: 85%;
     transform: translateX(-50%) scale(0.15);
     animation: pulsar 1.5s infinite; /* Faz o chapéu pulsar */
     cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    -webkit-animation: pulsar 1.5s infinite; /* Adicionado */
+    -webkit-transform: translateX(-50%) scale(0.15); /* Força renderização no iOS */
+    backface-visibility: hidden; /* Previne falhas ao animar */
+    perspective: 1000px; /* Ajuda em transformações 3D */
+    opacity: 1 !important; /* Garante visibilidade */
 }
 
 /* Animação de pulsação do chapéu */
@@ -294,7 +300,19 @@ body, html {
         transform: translateX(-50%) scale(0.15);
     }
     50% {
-        transform: translateX(-50%) scale(0.25); /* Aumenta um pouco o tamanho */
+        transform: translateX(-50%) scale(0.25);
+    }
+    100% {
+        transform: translateX(-50%) scale(0.15);
+    }
+}
+
+@-webkit-keyframes pulsar { /* Prefixo para navegadores iOS */
+    0% {
+        transform: translateX(-50%) scale(0.15);
+    }
+    50% {
+        transform: translateX(-50%) scale(0.25);
     }
     100% {
         transform: translateX(-50%) scale(0.15);
