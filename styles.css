@@ -70,6 +70,34 @@ body, html {
         opacity: 1;
     }
 }
+/* Estilo do texto pulsante */
+.texto-pulsante {
+    position: absolute;
+    top: 90%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    white-space: nowrap;
+    color: #fff;
+    font-weight: bold;
+    animation: pulsar 1.50s infinite ease-in-out;
+    z-index: 2; /* Garantir que o texto fique acima das imagens */
+}
+
+/* Animação para o texto pulsante */
+@keyframes pulsar {
+    0% {
+        transform: translate(-50%, -50%) scale(0.20);
+    }
+    50% {
+        transform: translate(-50%, -55%) scale(0.25);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.);
+    }
+}
+
+
 
 /* Imagem Chapeleiro saindo da esquerda para o centro */
 .imagem-chapeleiro {
@@ -234,7 +262,7 @@ body, html {
     transform: translateX(-50%); /* Centraliza com mais precisão */
     background-color: rgba(0, 0, 0, 0.5); /* Fundo preto mais transparente */
     line-height: 0.9; /* Ajuste o valor conforme necessário */
-    height: 220px;
+    height: 220px; /* Altura fixa */
     width: 400px; /* Largura fixa */
     padding: 10px;
     border-radius: 15px;
@@ -242,7 +270,22 @@ body, html {
     opacity: 0;
     animation: aparecer-balao 1.5s ease-in-out 5s forwards, crescer-balao 1.5s ease-in-out 5s forwards;
     z-index: 4;
+    display: flex; /* Torna o conteúdo flexível */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
 }
+
+.balão-informacoes img {
+    max-width: 100%; /* Impede que a imagem ultrapasse a largura do balão */
+    max-height: 60px; /* Define uma altura máxima */
+    width: auto; /* Mantém a proporção da imagem */
+    height: auto; /* Ajusta dinamicamente a altura */
+    margin-top: 10px; /* Espaço entre o texto e a imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    object-fit: contain; /* Garante que a imagem seja exibida completamente */
+}
+
+
 
 .balão-informacoes h2 {
     font-size: 30px;
@@ -282,13 +325,13 @@ body, html {
 .imagem-chapeu {
     position: absolute;
     will-change: transform, opacity; /* Adicionado */
-    bottom: -80px; /* Coloca o chapéu na parte inferior do balão */
+    bottom: 30px; /* Coloca o chapéu na parte inferior do balão */
     left: 85%;
-    transform: translateX(-50%) scale(0.15);
+    transform: translateX(-50%) scale(0.95);
     animation: pulsar 1.5s infinite; /* Faz o chapéu pulsar */
     cursor: pointer; /* Altera o cursor para indicar que é clicável */
     -webkit-animation: pulsar 1.5s infinite; /* Adicionado */
-    -webkit-transform: translateX(-50%) scale(0.15); /* Força renderização no iOS */
+    -webkit-transform: translateX(-50%) scale(0.95); /* Força renderização no iOS */
     backface-visibility: hidden; /* Previne falhas ao animar */
     perspective: 1000px; /* Ajuda em transformações 3D */
     opacity: 1 !important; /* Garante visibilidade */
@@ -297,57 +340,29 @@ body, html {
 /* Animação de pulsação do chapéu */
 @keyframes pulsar {
     0% {
-        transform: translateX(-50%) scale(0.15);
+        transform: translateX(-50%) scale(0.95);
     }
     50% {
-        transform: translateX(-50%) scale(0.25);
+        transform: translateX(-50%) scale(1.15);
     }
     100% {
-        transform: translateX(-50%) scale(0.15);
-    }
-}.imagem-chapeu {
-    position: absolute;
-    bottom: -80px;
-    left: 85%;
-    transform: translateX(-50%) scale(0.15);
-    animation: pulsar 1.5s infinite;
-    cursor: pointer;
-    opacity: 1 !important;
-    perspective: 1000px;
-    backface-visibility: visible;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 10; /* Garante que o chapéu esteja acima de outros elementos */
-}
-
-
-/* Animação de pulsação do chapéu */
-@keyframes pulsar {
-    0% {
-        transform: translateX(-50%) scale(0.15);
-        opacity: 1; /* Garante que o chapéu comece visível */
-    }
-    50% {
-        transform: translateX(-50%) scale(0.25);
-        opacity: 1; /* Garante que o chapéu permaneça visível durante a pulsação */
-    }
-    100% {
-        transform: translateX(-50%) scale(0.15);
-        opacity: 1; /* Garante que o chapéu permaneça visível */
+        transform: translateX(-50%) scale(0.95);
     }
 }
+
 
 /* Prefixo para iOS */
 @-webkit-keyframes pulsar {
     0% {
-        -webkit-transform: translateX(-50%) scale(0.15);
+        -webkit-transform: translateX(-50%) scale(0.95);
         opacity: 1;
     }
     50% {
-        -webkit-transform: translateX(-50%) scale(0.25);
+        -webkit-transform: translateX(-50%) scale(1.15);
         opacity: 1;
     }
     100% {
-        -webkit-transform: translateX(-50%) scale(0.15);
+        -webkit-transform: translateX(-50%) scale(0.95);
         opacity: 1;
     }
 }
@@ -386,3 +401,14 @@ body, html {
 .balão-lateral button:hover {
     background-color: #45a049;
 }
+.logo-tela {
+    position: absolute;
+    top: 157px; /* Ajuste a posição vertical */
+    left: 236px; /* Ajuste a posição horizontal */
+    transform: scale(0.5);
+    width: -300px; /* Define uma largura fixa */
+    height: auto; /* Mantém as proporções da imagem */
+    z-index: 10; /* Garante que a logo fique acima de outros elementos */
+}
+
+
