@@ -272,6 +272,13 @@ body, html {
     z-index: 4;
 }
 
+.imagem-logo {
+    position: absolute;
+    top: 83%; /* Coloca a imagem no meio da tela verticalmente */
+    left: 63%; /* Centraliza horizontalmente */
+    z-index: 3;
+    width: 29px;
+}
 .balão-informacoes h2 {
     font-size: 30px;
     margin-bottom: 8px;
