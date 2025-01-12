@@ -96,7 +96,17 @@ body, html {
         transform: translate(-50%, -50%) scale(0.);
     }
 }
-
+@-webkit-keyframes pulsar {
+    0% {
+        transform: translate(-50%, -50%) scale(0.20);
+    }
+    50% {
+        transform: translate(-50%, -55%) scale(0.25);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.);
+    }
+}
 
 
 /* Imagem Chapeleiro saindo da esquerda para o centro */
