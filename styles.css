@@ -80,34 +80,35 @@ body, html {
     white-space: nowrap;
     color: #fff;
     font-weight: bold;
-    animation: pulsar 1.5s infinite ease-in-out;
+    animation: pulsar 1.50s infinite ease-in-out;
     z-index: 2; /* Garantir que o texto fique acima das imagens */
 }
 
 /* Animação para o texto pulsante */
 @keyframes pulsar {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(0.20);
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -55%) scale(0.25);
     }
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(0.);
+    }
+}
+@-webkit-keyframes pulsar {
+    0% {
+        transform: translate(-50%, -50%) scale(0.20);
+    }
+    50% {
+        transform: translate(-50%, -55%) scale(0.25);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.);
     }
 }
 
-@-webkit-keyframes pulsar {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.2);
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
+
 
 
 /* Imagem Chapeleiro saindo da esquerda para o centro */
