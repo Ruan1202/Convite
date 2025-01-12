@@ -74,7 +74,7 @@ body, html {
 .texto-pulsante {
     position: absolute;
     top: 80%;
-    left: 85%;
+    left: 88%;
     transform: translate(-50%, -50%);
     font-size: 50px;
     white-space: nowrap;
@@ -82,6 +82,8 @@ body, html {
     font-weight: bold;
     animation: pulsar 1.50s infinite ease-in-out;
     z-index: 2; /* Garantir que o texto fique acima das imagens */
+    -webkit-animation: pulsar 1.5s infinite; /* Adicionado */
+    -webkit-transform: translateX(-50%) scale(0.15); /* Força renderização no iOS */
 }
 
 /* Animação para o texto pulsante */
@@ -93,7 +95,7 @@ body, html {
         transform: translate(-50%, -55%) scale(0.25);
     }
     100% {
-        transform: translate(-50%, -50%) scale(0.);
+        transform: translate(-50%, -50%) scale(0.20);
     }
 }
 @-webkit-keyframes pulsar {
@@ -104,11 +106,9 @@ body, html {
         transform: translate(-50%, -55%) scale(0.25);
     }
     100% {
-        transform: translate(-50%, -50%) scale(0.);
+        transform: translate(-50%, -50%) scale(0.20);
     }
 }
-
-
 
 
 /* Imagem Chapeleiro saindo da esquerda para o centro */
